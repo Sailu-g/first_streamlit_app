@@ -33,7 +33,7 @@ except URLError as e:
 
 
 #create the repeatble code block(called a function)
-def get fruityvice_data(this_fruit_choice);
+def get fruityvice_data(this_fruit_choice):
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
