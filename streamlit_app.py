@@ -30,7 +30,7 @@ try:
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     streamlit.dataframe(fruityvice_normalized)
 except URLError as e:
-streamlit.error()
+
 
 #create the repeatble code block(called a function)
 def get fruityvice_data(this_fruit_choice);
@@ -47,7 +47,7 @@ try:
     back_from_function=get_fruityvice_data(fruit_Choice)
     streamlit.dataframe(back_from_function)
 streamlit.stop()
-
+streamlit.error()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
